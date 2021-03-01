@@ -1,0 +1,27 @@
+{
+  "name":"lscott/StJamesOutreach",
+  "authors":[
+    {
+      "name": "Lewis Scott",
+      "email": "lscott19@mail.greenriver.edu"
+    },
+    {
+      "name": "David Haas",
+      "email": "Dhaas3@mail.greenriver.edu"
+    },
+    {
+      "name": "Arshdeep Singh",
+      "email": "Asingh69@mail.greenriver.edu"
+    },
+    {
+      "name": "Taras Gorbachevskiy",
+      "email": "Gorbataras@gmail.com"
+    }
+  ],
+  "require":{
+    "bcosca/fatfree-core":"dev-master"
+  },
+  "autoload":{
+    "classmap": ["controllers/"]
+  }
+}
