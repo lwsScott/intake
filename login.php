@@ -7,7 +7,8 @@ $err = false;
 $username = "";
 
 // Load credentials
-require ('/home/stjamesk/dotcom/creds/creds.php');
+//require ('/home/stjamesk/dotcom/creds/creds.php');
+require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 
 //If the form has been submitted
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -59,8 +60,8 @@ This is the login page for st. James Outreach
             <div class="navbar-nav">
                 <a href="index.php#assistance" class="nav-item nav-link">ASSISTANCE</a>
                 <a href="index.php#contact" class="nav-item nav-link">CONTACTS</a>
-                <a href="getinvolved.php" class="nav-item nav-link">GET INVOLVED</a>
-                <a href="resources.php" class="nav-item nav-link">RESOURCES</a>
+                <a href="getinvolved" class="nav-item nav-link">GET INVOLVED</a>
+                <a href="resources" class="nav-item nav-link">RESOURCES</a>
             </div>
         </div>
     </div>
