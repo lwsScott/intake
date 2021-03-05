@@ -42,9 +42,9 @@
                     showNonForm();
                 }
                 // Test to see if it is Wednesday
-            } else if (myDay == 3) {
+            } else if (myDay == 5) {
                 // Tests to see if it is after 1pm and before 4pm
-                if (13 <= myHour && myHour < 16) {
+                if (12 <= myHour && myHour < 16) {
                     showForm();
                 } else {
                     showNonForm();
@@ -71,8 +71,8 @@
             <div class="nav navbar-nav" id="navDiv">
                 <a href="#assistance" class="nav-item nav-link">ASSISTANCE</a>
                 <a href="#contact" class="nav-item nav-link">CONTACTS</a>
-                <a href="getinvolved.php" class="nav-item nav-link">GET INVOLVED</a>
-                <a href="resources.php" class="nav-item nav-link">RESOURCES</a>
+                <a href="getinvolved" class="nav-item nav-link">GET INVOLVED</a>
+                <a href="resources" class="nav-item nav-link">RESOURCES</a>
                 <a href="#" class="nav-item nav-link active"></a>
             </div>
         </div>
@@ -114,12 +114,12 @@
                 <i>Please enter your residential zip code to get started: </i>
             </p>
             <!-- Zipcode submit button form -->
-            <form class="form-inline justify-content-center mb-3" id="zipForm" action="form.php">
+            <form class="form-inline justify-content-center mb-3" id="zipForm" action="form">
                 <input id="zipCode" type="text" size="20" maxlength="5" placeholder="Zip Code"/>
                 <button type="submit" class="btn btn-info w3-button ml-2" id="btn-zipCode">Begin</button>
                 <br>
             </form>
-            <a class="w3-opacity w3-padding-small w3-text-white w3-hover-opacity-off" href="form.php#residency">
+            <a class="w3-opacity w3-padding-small w3-text-white w3-hover-opacity-off" href="form#residency">
                 <span class="lead"><u>I am currently without a residence</u></span>
             </a>
         </div>
@@ -144,7 +144,7 @@
                 <div class="modal-footer">
                     <!-- Link to the resource page -->
                     <button type="button" class="btn btn-secondary"
-                            onclick="window.location.href = '../resources.php';">Continue
+                            onclick="window.location.href = 'resources.php';">Continue
                     </button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
@@ -287,7 +287,7 @@
                         </p>
                         <p><i class="fa fa-phone contactFont"></i> Phone:<a href="tel:253-852-4100">253-852-4100</a></p>
                         <p><i class="fa fa-envelope contactFont"></i> Email:<a href="mailto: postrander@stjameskent.org">postrander@stjameskent.org</a></p>
-                        <a href="control.php" class="w3-text-white">Admin
+                        <a href="control" class="w3-text-white">Admin
                             Page</a>
                     </div>
                     <!--Google map-->
