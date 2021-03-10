@@ -1,7 +1,7 @@
 <?php
-//require("/home/stjamesk/dotcom/creds/creds.php");
-require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+require("/home/stjamesk/dotcom/creds/creds.php");
+//require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
 
 // This class is able to display all records and delete individual ones
 class Common

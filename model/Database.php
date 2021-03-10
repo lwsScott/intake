@@ -5,9 +5,10 @@
  * Date: 3/9/2018
  * Time: 11:31 AM
  */
+require("/home/stjamesk/dotcom/creds/creds.php");
 
-require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
 
 //echo DB_DSN;
 //echo DB_USERNAME;

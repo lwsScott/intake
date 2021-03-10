@@ -64,9 +64,9 @@ class IntakeController
         }
         // Include header file
         include("includes/head.html");
-        //require("/home/stjamesk/dotcom/creds/creds.php");
-        require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-        require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+        require("/home/stjamesk/dotcom/creds/creds.php");
+        //require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+        //require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
         $database = new Database();
         $requests = $database->getRequests();
 

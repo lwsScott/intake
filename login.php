@@ -7,8 +7,8 @@ $err = false;
 $username = "";
 
 // Load credentials
-//require ('/home/stjamesk/dotcom/creds/creds.php');
-require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+require ('/home/stjamesk/dotcom/creds/creds.php');
+//require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 
 //If the form has been submitted
 if($_SERVER['REQUEST_METHOD'] == 'POST') {

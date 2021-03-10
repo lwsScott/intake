@@ -1,7 +1,7 @@
 <?php
 // Validate Assistance
 function validAssist($assistance) {
-    $validAssistance = array("Utilities", "Rent", "Gas", "Thrift Store", "License or ID", "Food");
+    $validAssistance = array("Utilities", "Rent", "Gas", "Thrift Store", "License or ID", "Food", "Other");
     //Check each assistance is valid
     foreach($assistance as $assistanceCheck) {
         if (!in_array($assistanceCheck, $validAssistance)) {
