@@ -152,7 +152,7 @@ This is the form for St. James Outreach
                                 <!--Other Checkbox-->
                                 <div class='form-check'>
                                     <input class='form-check-input'
-                                           type='checkbox' name='other'
+                                           type='checkbox' name='assistance[]'
                                            id='other' value='Other: ' onclick='otherChecked()'>
                                     <label class='form-check-label'
                                            for='other'>Other</label><br>

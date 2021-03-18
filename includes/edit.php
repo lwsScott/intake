@@ -1,5 +1,7 @@
 <?php
-require("/home/stjamesk/dotcom/creds/creds.php");
+//require("/home/stjamesk/dotcom/creds/creds.php");
+require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+
 // Set the local variables to the values passed through $_POST
 $id = $_POST['id'];
 $text = $_POST['text'];

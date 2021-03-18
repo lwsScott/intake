@@ -1,7 +1,8 @@
 <?php
-require "/home/stjamesk/dotcom/creds/creds.php";
+//require "/home/stjamesk/dotcom/creds/creds.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 
 include_once "common.php";
 // if record is set in the $_GET array, then delete the row

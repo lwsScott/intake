@@ -1,9 +1,11 @@
 <?php
 // Return the value of teh completed row to determine if the row should be checked
-require("/home/stjamesk/dotcom/creds/creds.php");
+//require("/home/stjamesk/dotcom/creds/creds.php");
+require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+
 $id = $_POST['id'];
 $query = "SELECT completed FROM `outreach_form` WHERE id=".$id;
-$success = mysqli_query($conn, $query);
+$success = mysqli_query($cnxn, $query);
 // If not successful, echo out an error message
 if (!$success) {
     echo "$query";

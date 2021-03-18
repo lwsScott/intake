@@ -32,7 +32,8 @@ class IntakeController
             $username = strtolower(trim($_POST['username']));
             $password = trim($_POST['password']);
             //get login credentials
-            require('/home/stjamesk/dotcom/creds/creds.php');
+            //require('/home/stjamesk/dotcom/creds/creds.php');
+            require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 
             //checks to see if username and password are correct and if they are creates a session
             if ($username == $adminUser && $password == $adminPassword) {
@@ -64,7 +65,7 @@ class IntakeController
         }
         // Include header file
         include("includes/head.html");
-        require("/home/stjamesk/dotcom/creds/creds.php");
+        //require("/home/stjamesk/dotcom/creds/creds.php");
         //require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
         //require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
         $database = new Database();
@@ -124,12 +125,21 @@ class IntakeController
     {
         // session start();
         include('includes/head.html');
-
-
+        require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
         //require_once '/home2/lscottgr/db.php';
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/../db.php";
-
+        //require_once $_SERVER['DOCUMENT_ROOT'] . "/../db.php";
         //require("/home/stjamesk/dotcom/creds/creds.php");
+        /*
+        if ($_SERVER['USER'] == 'lscottgr')
+        {
+            require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+        }
+        else {
+            require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+        }
+        */
+
         require("includes/formFunctions.php");
 
         $target_file = "";
@@ -289,7 +299,8 @@ class IntakeController
         } else {
             $assistanceMore = $assistance;
         }
-        /// Prevent SQL injection
+
+        // Prevent SQL injection
         $fname = mysqli_real_escape_string($cnxn, $fname);
         $lname = mysqli_real_escape_string($cnxn, $lname);
         $phone = mysqli_real_escape_string($cnxn, $phone);

@@ -1,8 +1,15 @@
 <?php
-require("/home/stjamesk/dotcom/creds/creds.php");
+//require("/home/stjamesk/dotcom/creds/creds.php");
 //require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
-
+if ($_SERVER['USER'] == 'lscottgr')
+{
+    require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+    require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+}
+else {
+    require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
+}
 // This class is able to display all records and delete individual ones
 class Common
 {

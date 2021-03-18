@@ -43,7 +43,7 @@ This website is to let the user know that they submitted the form and emails the
             <h2>Thank you for your request. We'll be in touch soon!</h2>
             <br>
             <div>
-                <h4>Please <a href="{{@BASE}}/resources.php"><u>click here</u></a> to see the other resources provided!
+                <h4>Please <a href="{{@BASE}}/resources"><u>click here</u></a> to see the other resources provided!
                 </h4>
             </div>
         </div>
