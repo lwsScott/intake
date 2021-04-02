@@ -329,6 +329,15 @@ class IntakeController
         // Format data to be more easily read
         //$to = "bchadwick@mail.greenriver.edu";
         $to = "lscott19@mail.greenriver.edu";
+        $headers = '';
+        $headers .= "Reply-To: Peter Ostrander <lscott19@mail.greenriver.edu>\r\n";
+        $headers .= "Return-Path: Peter Ostrander  <lscott19@mail.greenriver.edu>\r\n";
+        $headers .= "From: Peter Ostrander <lscott19@mail.greenriver.edu>\r\n";
+        $headers .= "Organization: St. James Outreach\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+        $headers .= "X-Priority: 3\r\n";
+        $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 
         $subject = "Form completed";
         $message = "Form completed by: $fname $lname \r\n";
@@ -344,8 +353,8 @@ class IntakeController
         // Email data
         $confirmEmail = "Thank you for submitting your form, " . $fname . "\n\n" . $message;
         $confirmEmailSubject = "St.James Application";
-        mail($to, $subject, $message);
-        mail($email, $confirmEmailSubject, $confirmEmail);
+        mail($to, $subject, $message, $headers);
+        mail($email, $confirmEmailSubject, $confirmEmail, $headers);
 
         //$database = new Database();
         //if submitted login form
