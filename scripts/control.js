@@ -78,3 +78,23 @@ $('.completed').on('change', function () {
     //update row color
     $(this).is(':checked') ? $(this).closest('tr').css({background: '#d1dce7'}) : $(this).closest('tr').css({background: ''});
 });
+
+$(".remove").click(function(){
+    var id = $(this).parents("tr").attr("id");
+    var url = $(this).parents("tr").attr("href");
+    if(confirm('Are you sure to remove this record?'))
+    {
+        $.ajax({
+            url: 'includes/delete.php?recordId={{@request["id"]}}',
+            type: 'GET',
+            data: {id: id},
+            error: function() {
+                alert('Something is wrong');
+            },
+            success: function(data) {
+                $("#"+id).remove();
+                alert("Record removed successfully");
+            }
+        });
+    }
+});

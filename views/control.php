@@ -89,7 +89,8 @@ This website is the control page for the Admin user
                         </a>
                     </td>
                     <td>
-                        <a href='includes/delete.php?recordId={{@request["id"]}}' class='btn btn-sm text-white mt-2'>Delete</a>
+                        <!--<a href='includes/delete.php?recordId={{@request["id"]}}' class='btn btn-sm text-white mt-2'>Delete</a>-->
+                        <a href='includes/delete.php?recordId={{@request["id"]}}' class="btn btn-danger btn-sm remove">Delete</a>
                     </td>
                 </tr>
             </repeat>
