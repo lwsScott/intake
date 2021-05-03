@@ -18,7 +18,7 @@ class Common
         var_dump($path);
         if ($path[0] != "uploads/") {
             unlink("/home2/lscottgr/public_html/intake/$path[0]");
-            //unlink("/home/dotcomgr/public_html/$path[0]");
+            //unlink("/home/stjamesk/public_html/intake/$path[0]");
         }
         $query = "DELETE FROM outreach_form WHERE id='$recordId'";
         $result = $conn->query($query) or die("Error in query3".$conn->error);
