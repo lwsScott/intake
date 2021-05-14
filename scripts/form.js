@@ -280,6 +280,7 @@ function showSummary() {
         let lname = document.getElementById("lname").value;
         let phone = document.getElementById("phone").value;
         let email = document.getElementById("inputEmail").value;
+        let priorHelp = document.getElementsByName("priorHelp");
         let addressOne = document.getElementById("inputAddress").value;
         let addressTwo = document.getElementById("inputAddress2").value;
         let city = document.getElementById("inputCity").value;
@@ -298,6 +299,12 @@ function showSummary() {
         document.getElementById("lName-sum").innerHTML = lname;
         document.getElementById("phone-sum").innerHTML = phone;
         document.getElementById("inputEmail-sum").innerHTML = email;
+        //document.getElementById("priorHelp-sum").innerHTML = priorHelp;
+        for(i = 0; i < priorHelp.length; i++) {
+            if(priorHelp[i].checked)
+                document.getElementById("priorHelp-sum").innerHTML
+                    = priorHelp[i].value;
+        }
         document.getElementById("inputAddress-sum").innerHTML = addressOne;
         document.getElementById("inputAddress2-sum").innerHTML = addressTwo;
         document.getElementById("inputCity-sum").innerHTML = city;
@@ -308,6 +315,17 @@ function showSummary() {
     }
 
 }
+
+function displayRadioValue() {
+    var ele = document.getElementsByName('priorHelp');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked)
+            document.getElementById("priorHelp-sum").innerHTML
+                = ele[i].value;
+    }
+}
+
 
 //validates that zipcode
 function validateZip() {

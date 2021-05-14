@@ -288,6 +288,7 @@ class IntakeController
             return;
         }
 
+        $priorHelp = $_POST['priorHelp'];
         $addressOne = $_POST['address'];
         $addressTwo = $_POST['addressTwo'];
         $city = $_POST['city'];
@@ -304,6 +305,7 @@ class IntakeController
         $fname = mysqli_real_escape_string($cnxn, $fname);
         $lname = mysqli_real_escape_string($cnxn, $lname);
         $phone = mysqli_real_escape_string($cnxn, $phone);
+        $priorHelp = mysqli_real_escape_string($cnxn, $priorHelp);
         $addressOne = mysqli_real_escape_string($cnxn, $addressOne);
         $addressTwo = mysqli_real_escape_string($cnxn, $addressTwo);
         $city = mysqli_real_escape_string($cnxn, $city);
@@ -315,9 +317,9 @@ class IntakeController
         // Send data to database
         $sql = "INSERT INTO outreach_form 
                 (`completed`, `FirstName`, `LastName`, `Phone`, `Email`, `Address`, `AddressTwo`, 
-                `City`, `Zip`, `HelpList`, `Comments`, `Attachments`) 
+                `City`, `Zip`, `HelpList`, `Comments`, `Attachments`, `PriorHelp`) 
                 VALUES (0, '$fname', '$lname', '$phone', 
-                '$email', '$addressOne', '$addressTwo', '$city', '$zip', '$assistanceMore', '$comment', '$target_file');";
+                '$email', '$addressOne', '$addressTwo', '$city', '$zip', '$assistanceMore', '$comment', '$target_file', '$priorHelp');";
 
         // Test if query was successful
         $success = mysqli_query($cnxn, $sql);
@@ -328,7 +330,8 @@ class IntakeController
 
         // Format data to be more easily read
         //$to = "bchadwick@mail.greenriver.edu";
-        $to = "lscott19@mail.greenriver.edu";
+        //$to = "lscott19@mail.greenriver.edu";
+        $to = "dhaas3@mail.greenriver.edu";
         $headers = '';
         $headers .= "Reply-To: Peter Ostrander <lscott19@mail.greenriver.edu>\r\n";
         $headers .= "Return-Path: Peter Ostrander  <lscott19@mail.greenriver.edu>\r\n";
@@ -343,6 +346,7 @@ class IntakeController
         $message = "Form completed by: $fname $lname \r\n";
         $message .= "Phone: $phone\n";
         $message .= "Email: $email\n\n";
+        $message .= "Prior Help: $priorHelp\n\n";
         $message .= "Address: $addressOne $addressTwo\n";
         $message .= "City: $city\n";
         $message .= "Zip: $zip \n\n";

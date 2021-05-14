@@ -79,6 +79,25 @@ This is the form for St. James Outreach
                                 </div>
                                 <span id="error-email" class="hidden">*Please insert a valid email (ex: xxxx@xxxx.xxx)<br></span>
                                 <span id="error-contact" class="hidden">*Please give contact method (preferably email)</span>
+                                <label>Have you received assistance from us before?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="priorHelp" id="yesHelp" value="yes">
+                                    <label class="form-check-label" for="unknown">
+                                        Yes, I have
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="priorHelp" id="noHelp" value="no">
+                                    <label class="form-check-label" for="unknown">
+                                        No, I haven't
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="priorHelp" id="unknown" value="unknown" checked>
+                                    <label class="form-check-label" for="unknown">
+                                        I'm not sure
+                                    </label>
+                                </div>
                             </div>
                             <!--Assistance Checkboxes-->
                             <div class="w3-half">
@@ -244,6 +263,10 @@ This is the form for St. James Outreach
                             <tr>
                                 <th>Email:</th>
                                 <td id="inputEmail-sum"></td>
+                            </tr>
+                            <tr>
+                                <th>Prior Help:</th>
+                                <td id="priorHelp-sum"></td>
                             </tr>
                             <tr>
                                 <th>Address 1:</th>

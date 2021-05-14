@@ -60,6 +60,7 @@ This website is the control page for the Admin user
                 <th scope="col">Zip</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
+                <th scope="col">Prior Help</th>
                 <th scope="col">Help List</th>
                 <th scope="col">Comments</th>
                 <th scope="col">Notes</th>
@@ -76,6 +77,7 @@ This website is the control page for the Admin user
                     <td>{{@request['Zip']}}</td>
                     <td>{{@request['Email']}}</td>
                     <td>{{@request['Phone']}}</td>
+                    <td>{{@request['PriorHelp']}}</td>
                     <td>{{@request['HelpList']}}</td>
                     <td>{{@request['Comments']}}</td>
                     <td class="notes" id="note{{@request['id']}}" contenteditable="true">{{@request['Note']}}</td>
