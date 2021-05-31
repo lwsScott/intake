@@ -20,7 +20,6 @@ $f3->route('GET|POST /', function($f3) {
     $GLOBALS['controller']->home($f3);
 });
 
-
 //form route
 $f3->route('GET|POST /form', function($f3) {
     $GLOBALS['controller']->form($f3);
@@ -46,7 +45,7 @@ $f3->route('GET|POST /getinvolved', function($f3) {
     $GLOBALS['controller']->getinvolved($f3);
 });
 
-//confirmation
+//resources available route
 $f3->route('GET|POST /resources', function($f3) {
     $GLOBALS['controller']->resources($f3);
 });

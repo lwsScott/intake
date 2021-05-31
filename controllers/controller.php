@@ -23,9 +23,11 @@ class IntakeController
         $this->_validator = $validator;
     }
 
+    /**
+     * @param $f3
+     */
     public function home($f3)
     {
-
         session_start();
         //get the username and make it lowercase
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -51,6 +53,9 @@ class IntakeController
         echo $template->render('views/home.html');
     }
 
+    /**
+     * @param $f3
+     */
     public function admin($f3)
     {
 
@@ -65,24 +70,20 @@ class IntakeController
         }
         // Include header file
         include("includes/head.html");
-        //require("/home/stjamesk/dotcom/creds/creds.php");
-        //require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-        //require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+
         $database = new Database();
         $requests = $database->getRequests();
 
         $f3->set('requests', $requests);
-        /*
-        // Select column data from the database table
-        $sql = "SELECT `completed`, `id`, `date`, `FirstName`, `LastName`, `Phone`, `Email`, 
-                                `Address`, `AddressTwo`, `City`, `Zip`, `HelpList`, `Comments`, `Note`, `Attachments`
-                                from outreach_form ORDER BY Date DESC";
-        $result = $cnxn->query($sql);
-        */
+
         //if submitted login form
         $template = new Template();
         echo $template->render('views/control.php');
     }
+
+    /**
+     * @param $f3
+     */
     public function form($f3)
     {
         include('includes/head.html');
@@ -93,6 +94,9 @@ class IntakeController
         echo $template->render('views/form.php');
     }
 
+    /**
+     * @param $f3
+     */
     public function logout($f3)
     {
         //$database = new Database();
@@ -101,6 +105,9 @@ class IntakeController
         echo $template->render('views/logout.php');
     }
 
+    /**
+     * @param $f3
+     */
     public function getinvolved($f3)
     {
         include('includes/head.html');
@@ -111,6 +118,9 @@ class IntakeController
         echo $template->render('views/getinvolved.php');
     }
 
+    /**
+     * @param $f3
+     */
     public function resources($f3)
     {
         include('includes/head.html');
@@ -121,29 +131,18 @@ class IntakeController
         echo $template->render('views/resources.php');
     }
 
+    /**
+     * @param $f3
+     */
     public function confirmation($f3)
     {
         // session start();
         include('includes/head.html');
         require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-        //require_once '/home2/lscottgr/db.php';
-        //require_once $_SERVER['DOCUMENT_ROOT'] . "/../db.php";
-        //require("/home/stjamesk/dotcom/creds/creds.php");
-        /*
-        if ($_SERVER['USER'] == 'lscottgr')
-        {
-            require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-            require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
-        }
-        else {
-            require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-        }
-        */
 
         require("includes/formFunctions.php");
 
         $target_file = "";
-        //if (!(empty($_FILES))) {
         if ((isset($_FILES))) {
 
             echo '<pre>';
@@ -330,8 +329,8 @@ class IntakeController
 
         // Format data to be more easily read
         //$to = "bchadwick@mail.greenriver.edu";
-        //$to = "lscott19@mail.greenriver.edu";
-        $to = "dhaas3@mail.greenriver.edu";
+        $to = "lscott19@mail.greenriver.edu";
+        //$to = "dhaas3@mail.greenriver.edu";
         $headers = '';
         $headers .= "Reply-To: Peter Ostrander <lscott19@mail.greenriver.edu>\r\n";
         $headers .= "Return-Path: Peter Ostrander  <lscott19@mail.greenriver.edu>\r\n";

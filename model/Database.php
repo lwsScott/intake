@@ -5,22 +5,8 @@
  * Date: 3/9/2018
  * Time: 11:31 AM
  */
-//require("/home/stjamesk/dotcom/creds/creds.php");
 require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
-/*
-if ($_SERVER['USER'] == 'lscottgr')
-{
-    require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-    require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
-}
-else {
-    require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-}
-*/
-//echo DB_DSN;
-//echo DB_USERNAME;
-//echo DB_PASSWORD;
+
 /**
  * Class Database, preforms sql statements to insert/delete/update/view
  */

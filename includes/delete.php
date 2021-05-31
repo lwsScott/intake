@@ -1,7 +1,5 @@
 <?php
-//require "/home/stjamesk/dotcom/creds/creds.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/../db.php";
+
 require_once $_SERVER['DOCUMENT_ROOT']."/../config.php";
 
 include_once "common.php";
@@ -11,7 +9,6 @@ if (isset($_GET['recordId'])) {
     // construct a new Common() class
     $common = new Common();
     // delete the row
-    //$delete = $common->deleteRecordById($conn, $recordId);
     $delete = $common->deleteRecordById($cnxn, $recordId);
     // if delete works, redirect page back to control page
     if ($delete) {
